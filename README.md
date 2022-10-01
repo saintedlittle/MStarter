@@ -5,4 +5,4 @@
 
 [CommandLine 🎉](https://github.com/Leanfe/MStarter/wiki/Minecraft-CommandLine-args.)
 
-[JavaDoc ](https://leanfe.github.io/MStarter/)
+[JavaDoc ☕](https://leanfe.github.io/MStarter/)
