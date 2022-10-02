@@ -10,9 +10,7 @@ repositories {
 }
 
 dependencies {
-    
-}
-
-test {
-    useJUnitPlatform()
+    implementation group: 'net.bytebuddy', name: 'byte-buddy-agent', version: '1.12.17'
+    implementation group: 'net.bytebuddy', name: 'byte-buddy-dep', version: '1.12.17'
+    implementation group: 'net.bytebuddy', name: 'byte-buddy-gradle-plugin', version: '1.12.17'
 }

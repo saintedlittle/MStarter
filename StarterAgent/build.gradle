@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.leanfe.agent'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "com.github.leanfe.agent.ClassPathAgent"
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

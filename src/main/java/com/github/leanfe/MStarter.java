@@ -73,5 +73,6 @@ public class MStarter {
         for (String s : message) {
             System.out.println(s);
         }
+
     }
 }
