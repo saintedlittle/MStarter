@@ -3,3 +3,5 @@ com.github.leanfe.agent
 com.github.leanfe.api
 com.github.leanfe.api.exceptions
 com.github.leanfe.api.version
+com.github.leanfe.api.version.forge
+com.github.leanfe.api.version.vanilla

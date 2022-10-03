@@ -4,6 +4,13 @@ import com.github.leanfe.api.version.Version;
 
 import java.util.ArrayList;
 
+/**
+ * The Forge version type.
+ * Used to create and use versions of Forge.
+ *
+ * @author Leanfe
+ * @since 2.0
+ */
 public class ForgeVersion extends Version {
 
     /**
@@ -19,6 +26,11 @@ public class ForgeVersion extends Version {
         setBaseArgs(args);
     }
 
+    /**
+     * Set base arguments.
+     * @param args - List of arguments.
+     * @return instance of version.
+     */
     @Override
     protected Version setBaseArgs(ArrayList<String> args) {
         args.add(" --version " + getName());

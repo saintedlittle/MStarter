@@ -2,10 +2,17 @@ package com.github.leanfe.api.version.vanilla;
 
 import com.github.leanfe.api.version.Version;
 
+/**
+ * The Vanilla version type.
+ * Used to create and use versions of Vanilla.
+ *
+ * @author Leanfe
+ * @since 2.0
+ */
 public class VanillaVersion extends Version {
 
     /**
-     * The Version constructor.
+     * The Vanilla Version constructor.
      *
      * @param name                 the name of folder with version.
      * @param pathDll              the path to all dll-files.

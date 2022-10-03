@@ -9,6 +9,8 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+lib/1.12.2.jar
+
 # AWS User-specific
 .idea/**/aws.xml
 

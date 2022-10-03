@@ -2,6 +2,13 @@ package com.github.leanfe.api.version.vanilla;
 
 import com.github.leanfe.api.version.Version;
 
+/**
+ * List of available vanilla versions.
+ * Need for get a basic vanilla version.
+ *
+ * @author Leanfe
+ * @since 2.0
+ */
 public class VanillaVersionClasses {
 
     public static class VERSION_1_8 extends Version {

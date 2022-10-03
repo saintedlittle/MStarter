@@ -126,6 +126,11 @@ public abstract class Version implements IVersion {
         return minecraftJarfileName;
     }
 
+    /**
+     * Set base arguments.
+     * @param args List of arguments.
+     * @return instance of version.
+     */
     protected Version setBaseArgs(ArrayList<String> args) {
         args.add(" --version " + getName());
         args.add(" --assetIndex " + getName());
@@ -134,6 +139,12 @@ public abstract class Version implements IVersion {
         return this;
     }
 
+    /**
+     * Set player info.
+     * @param username username.
+     * @param UUID player uuid.
+     * @return instance of version.
+     */
     public Version settingPlayer(String username, String UUID) {
         args.add(" --username " + username);
         args.add(" --uuid " + UUID);
@@ -141,28 +152,65 @@ public abstract class Version implements IVersion {
         return this;
     }
 
+
+    /**
+     * Change default run directory.
+     * @param path path to new dir.
+     * @return instance of version.
+     */
     public Version setDirectory(File path) {
         args.add(" --gameDir " + path.getAbsolutePath());
         args.add(" --assetsDir " + path + File.separator + "assets");
         return this;
     }
 
+    /**
+     * Change default width.
+     * @param width new width.
+     * @return instance of version.
+     */
     public Version setWidth(String width) {
         args.add(" --width " + width);
         return this;
     }
 
+    /**
+     * Change default height.
+     * @param height new height.
+     * @return instance of version.
+     */
     public Version setHeight(String height) {
         args.add(" --height " + height);
         return this;
     }
 
+    /**
+     * Set server to connect.
+     * @param server IP/domain
+     * @param port PORT
+     * @return instance of version.
+     */
     public Version setServer(String server, String port) {
         args.add(" --server " + server);
         args.add(" --port " + port);
         return this;
     }
 
+    /**
+     * Set server to connect.
+     * @param domain domain.
+     * @return instance of version.
+     */
+    public Version setServer(String domain) {
+        args.add(" --server " + domain);
+        return this;
+    }
+
+    /**
+     * Set demo for game.
+     * @param demo true/false.
+     * @return instance of version.
+     */
     public Version setDemo(boolean demo) {
         if (demo) args.add(" --demo");
         return this;
