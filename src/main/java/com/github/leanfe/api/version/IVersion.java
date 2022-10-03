@@ -1,9 +1,7 @@
 package com.github.leanfe.api.version;
 
-import com.github.leanfe.api.exceptions.VersionException;
-
 /**
- * IVersion interface.
+ * Vanilla Version interface.
  * An interface that contains basic methods for working with the Version.
  *
  * @since 1.0
@@ -17,32 +15,22 @@ public interface IVersion {
      *
      * @return status code.
      */
-    public abstract int load();
+    @Deprecated
+    int load();
 
     /**
      * Add argument.
      *
      * @param value The argument for Minecraft that will be passed to it. See GitHub
      */
-    public abstract void addArgument(String value);
+    void addArgument(String value);
 
     /**
      * The method performs the simplest function.
      * Just launches the main class from a tightened jar.
      *
      * @return stream, with the application running.
-     * @throws VersionException If an error occurred during version processing.
-     * @param args Arguments for minecraft. See <a href="https://github.com/Leanfe/MStarter/wiki/Minecraft-CommandLine-args.">Wiki</a>
      */
-    public abstract Thread start(String[] args) throws VersionException;
-
-    /**
-     * The method performs the simplest function.
-     * Just launches the main class from a tightened jar.
-     *
-     * @return stream, with the application running.
-     * @throws VersionException If an error occurred during version processing.
-     */
-    Thread start() throws VersionException;
+    Thread start();
 
 }

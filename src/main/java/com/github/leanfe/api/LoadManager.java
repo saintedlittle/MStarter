@@ -6,11 +6,6 @@ import net.bytebuddy.agent.ByteBuddyAgent;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.util.Objects;
 
 /**
@@ -62,33 +57,8 @@ public class LoadManager {
         }
     }
 
-
     /**
-     * The method of loading the main class of the game.
-     *
-     * @param myJar     The path to the minecraft jar file.
-     * @param className The name of the main class to load from the JAR class.
-     * @throws ClassNotFoundException    The class not found exception.
-     * @throws NoSuchMethodException     The no such method exception.
-     * @throws InstantiationException    The instantiation exception.
-     * @throws IllegalAccessException    The illegal access exception.
-     * @throws InvocationTargetException The invocation target exception.
-     * @throws MalformedURLException     Error loading the file URL.
-     */
-    protected Object loadMainJar(File myJar, String className)
-            throws ClassNotFoundException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException, MalformedURLException {
-        URLClassLoader child = new URLClassLoader(
-                new URL[] {
-                        myJar.toURI().toURL()
-                },
-                this.getClass().getClassLoader()
-        );
-        Class<?> classToLoad = Class.forName(className, true, child);
-        return classToLoad.newInstance();
-    }
-
-    /**
-     * The method for load any jar file in folder.
+     * The method for load any jar file.
      * @param myJar The path to .JAR file to load to the JVM.
      * @throws AgentException An exception that is thrown when an agent error occurs. See {@link com.github.leanfe.api.exceptions.AgentException}
      */
@@ -107,27 +77,21 @@ public class LoadManager {
      * @param dllPath The path to all .dll files for minecraft.
      * @param pathJar The path to all .jar files for minecraft.
      * @param minecraftJar The path to .jar file minecraft.
-     * @param minecraftClassName The name of the main minecraft class.
      * @throws IOException Error opening the directory.
      * @throws AgentException An exception that is thrown when an agent error occurs. See {@link com.github.leanfe.api.LoadManager#loadJar(File)}
      *
-     * @return Minecraft main class object.
      */
-    public Object load(String dllPath, String pathJar, String minecraftJar, String minecraftClassName) throws IOException, AgentException {
+    public void load(String dllPath, String pathJar, String minecraftJar) throws IOException, AgentException {
         loadDll(dllPath);
-        Object obj = null;
-        try {
-            obj = loadMainJar(new File(minecraftJar), minecraftClassName);
-        } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException("Error loading the minecraft class!");
-        }
+
+        loadJar(new File(minecraftJar));
 
         for (File file : Objects.requireNonNull(new File(pathJar).listFiles())) {
             if (file.getName().endsWith(".jar")) {
                 loadJar(file);
             }
         }
-        return Objects.requireNonNull(obj);
+
     }
 
 }

@@ -17,7 +17,7 @@ public class ClassPathAgent {
      *
      * @param args            the args
      * @param instrumentation the instrumentation.
-     * @throws IOException any trobules with load.
+     * @throws IOException any troubles with load.
      */
     public static void agentmain(String args, Instrumentation instrumentation) throws IOException {
         instrumentation.appendToSystemClassLoaderSearch(new JarFile(args));
