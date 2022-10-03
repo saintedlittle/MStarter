@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.github.leanfe"},{"l":"com.github.leanfe.agent"},{"l":"com.github.leanfe.api"},{"l":"com.github.leanfe.api.exceptions"},{"l":"com.github.leanfe.api.version"},{"l":"com.github.leanfe.api.version.forge"},{"l":"com.github.leanfe.api.version.vanilla"}];updateSearchResults();
