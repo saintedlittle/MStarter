@@ -48,9 +48,7 @@
     },
     "PATH_OFFSET": 1,
     "PREFIX_LENGTH_OFFSET": 1
-  },
-  "path": "@string",
-  "pathJar": "@string"
+  }
 }
 ```
 ## ????
@@ -102,5 +100,3 @@
 ?PATH_OFFSET|long|N|N/A|
 ?PREFIX_LENGTH_OFFSET|long|N|N/A|
 ?filePath|Path|N|N/A|
-path|String|N|N/A|This field contains the path to all .DLL files required to run the game.
-pathJar|String|N|N/A|This field contains the path to all .JAR files required to run the game.
