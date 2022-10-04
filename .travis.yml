@@ -1,11 +1,9 @@
 language: java
-
-before_install:
- - chmod +x gradlew
  
 os: linux
 dist: trusty
 jdk: oraclejdk8
 
 script:
+  - chmod +x gradlew
   - ./gradlew build
