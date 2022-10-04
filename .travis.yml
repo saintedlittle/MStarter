@@ -2,7 +2,7 @@ language: java
  
 os: linux
 dist: trusty
-jdk: oraclejdk8
+jdk: openjdk16
 
 script:
   - chmod +x gradlew
