@@ -1,0 +1,11 @@
+language: java
+
+before_install:
+ - chmod +x gradlew 
+ 
+os: linux
+dist: trusty
+jdk: openjdk16
+
+script:
+  - ./gradlew build
