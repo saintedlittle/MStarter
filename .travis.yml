@@ -1,6 +1,8 @@
 language: java
-install: skip
 
+before_install:
+ - chmod +x gradlew
+ 
 os: linux
 dist: trusty
 jdk: oraclejdk8
