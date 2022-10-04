@@ -1,1 +1,8 @@
 theme: minima
+  skin: dark
+  
+include:
+  - _pages
+  
+header_pages:
+  - _javadoc/index.html
