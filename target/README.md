@@ -1,3 +1,0 @@
-# What is wrong with this...
-
-Here is a **failed API for classes**. I keep it just **as a memory.**
