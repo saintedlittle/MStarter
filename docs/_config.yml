@@ -1,6 +1,5 @@
 theme: minima
-  skin: dark
-  
+
 include:
   - _pages
   
