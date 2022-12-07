@@ -1,3 +1,5 @@
 rootProject.name = 'MstartLibrary'
-include 'StarterAgent'
+include 'MStarterAgent'
+include 'MStarterJson'
+include 'MStarterAPI'
 

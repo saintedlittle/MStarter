@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.leanfe.api'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'net.bytebuddy', name: 'byte-buddy-agent', version: '1.12.17'
+    implementation group: 'net.bytebuddy', name: 'byte-buddy-dep', version: '1.12.17'
+    implementation group: 'net.bytebuddy', name: 'byte-buddy-gradle-plugin', version: '1.12.17'
+    implementation fileTree(dir: '../libs', include: ['*.jar'])
+}
+
+test {
+    useJUnitPlatform()
+}
