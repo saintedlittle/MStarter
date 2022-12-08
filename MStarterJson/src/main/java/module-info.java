@@ -6,7 +6,8 @@ module MStarterJson {
     
     requires lombok;
 
-    requires MStarterAPI;
+    exports com.github.leanfe.json.types.vanilla;
+    exports com.github.leanfe.json.types.forge;
 
     exports com.github.leanfe.json;
 }

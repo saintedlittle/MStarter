@@ -1,4 +1,4 @@
-package com.github.leanfe.api.json;
+package com.github.leanfe.json.api;
 
 import java.time.OffsetDateTime;
 import java.time.OffsetTime;

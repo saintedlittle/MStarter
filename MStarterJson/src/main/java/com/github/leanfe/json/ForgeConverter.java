@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.github.leanfe.api.json.ConverterDate;
+import com.github.leanfe.json.api.ConverterDate;
 import com.github.leanfe.json.types.forge.ForgeJSON;
 
 import java.io.IOException;
